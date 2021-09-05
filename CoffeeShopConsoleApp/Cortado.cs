@@ -24,7 +24,7 @@ namespace CoffeeShopConsoleApp
         {
             Console.WriteLine("Coffee Cortado");
             Console.WriteLine("___________________");
-            return "Medium - Cortado";
+            return "Medium";
         }
     }
 }

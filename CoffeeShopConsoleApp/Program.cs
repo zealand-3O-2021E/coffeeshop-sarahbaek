@@ -27,8 +27,21 @@ namespace CoffeeShopConsoleApp
               
             }
 
-         
+            Console.WriteLine();
 
+            List<Coffee> milkyCoffee = new List<Coffee>()
+            {
+                new Latte(0),
+                new Cortado(1)
+
+            };
+           
+            Console.WriteLine("Coffee with Milk");
+            foreach (Coffee coffee in milkyCoffee)
+            {
+                Console.WriteLine("the Price of the coffee is = {0}, Strength= {1} ", coffee.price(), coffee.Strength());
+                Console.WriteLine();
+            }
             Console.ReadLine();
 
         }
