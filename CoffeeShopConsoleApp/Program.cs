@@ -13,9 +13,9 @@ namespace CoffeeShopConsoleApp
 
            List < Coffee > orderList = new List<Coffee>()
            {
-                new Latte(),
-                new Cortado(),
-                new BlackCoffee()
+                new Latte(1),
+                new Cortado(1),
+                new BlackCoffee(1)
 
            };
 
@@ -23,13 +23,11 @@ namespace CoffeeShopConsoleApp
             foreach (var coffee in orderList)
             {
                 Console.WriteLine("the Price of the coffee is = {0}, Strength= {1} ", coffee.price(), coffee.Strength());
-                //Console.WriteLine("The proce of the coffe is = "coffee.price);
+                Console.WriteLine();
+              
             }
 
-            //Latte l1 = new Latte();
-            //Cortado c1 = new Cortado();
-            //BlackCoffee bc = new BlackCoffee();
-            ////List<Coffee> cc = new Latte();
+         
 
             Console.ReadLine();
 

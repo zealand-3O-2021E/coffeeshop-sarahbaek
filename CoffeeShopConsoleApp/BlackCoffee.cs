@@ -6,9 +6,16 @@ namespace CoffeeShopConsoleApp
 {
     public class BlackCoffee : Coffee
     {
+        public BlackCoffee(int discount): base(discount)
+        {
+         
+        }
+
         public override string Strength()
         {
-           return "Strong";
+            Console.WriteLine("Black Coffee");
+            Console.WriteLine("___________________");
+            return "Strong";
         }
     }
 }

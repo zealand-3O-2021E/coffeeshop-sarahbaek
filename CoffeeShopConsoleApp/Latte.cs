@@ -6,6 +6,10 @@ namespace CoffeeShopConsoleApp
 {
    public class Latte : Coffee, IMilk
     {
+        public Latte(int discount): base(discount)
+        {
+         
+        }
         public int MlMilk()
         {
             return 200;
@@ -13,11 +17,13 @@ namespace CoffeeShopConsoleApp
 
         public override int price()
         {
-            return 40;
+            return 40 - Discount;
         }
 
         public override string Strength()
         {
+            Console.WriteLine("Coffee Latte");
+            Console.WriteLine("___________________");
            return "Weak";
         }
     }
