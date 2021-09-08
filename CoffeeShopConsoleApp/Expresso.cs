@@ -7,7 +7,7 @@ namespace CoffeeShopConsoleApp
     public class Expresso : Coffee, IBlendingCoffee
       
     {
-        public Expresso(string name, int discount): base(name, discount)
+        public Expresso(string name, int discount, int price): base(name, discount, price)
         {
 
         }

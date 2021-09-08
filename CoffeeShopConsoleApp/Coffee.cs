@@ -15,35 +15,39 @@ namespace CoffeeShopConsoleApp
         /// </summary>
         /// <returns>20 dkr</returns>
         /// 
+        public const string DiscountNotGreaterThanFive = "The discount should not be greater than 5 kr.";
+        public const string DiscountNotLessThanZero = "The discount should not be less than 0kr.";
+        /// 
         private int _discount;
         private string _name;
+        private int _price;
 
-        public Coffee(string name, int discount)
+        public Coffee(string name, int discount, int price)
         {
             _name = name;
             _discount = discount;
 
             if (discount > 5)
             {
-                throw new Exception("The discount should not be greater than 5 kr.");
+                throw new System.ArgumentOutOfRangeException("discount",DiscountNotGreaterThanFive);
             }
+            if (discount < 0)
+            {
+                throw new System.ArgumentOutOfRangeException("discount", DiscountNotLessThanZero);
+            }
+
+            _price = price;
         }
 
-        protected Coffee(int discount)
-        {
-            Discount = discount;
-        }
 
         public int Discount { get => _discount; set => _discount = value; }
         public string Name { get => _name; set => _name = value; }
+        public int Price { get => _price; set => _price = value; }
 
-        public virtual int price()
+        public virtual int CoffeePrice()
         {
-            //if (Discount > 5)
-            //{
-            //    throw new Exception("The discount should be less than 5kr.");
-            //}
-            return 20 - Discount;
+            Price = 40;
+            return Price - Discount;
         }
 
         public abstract string Strength();

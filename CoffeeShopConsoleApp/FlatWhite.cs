@@ -6,7 +6,7 @@ namespace CoffeeShopConsoleApp
 {
     public class FlatWhite : Coffee
     {
-        public FlatWhite(string name,int discount): base(name, discount)
+        public FlatWhite(string name,int discount, int price): base(name, discount, price)
         {
 
         }
