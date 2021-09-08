@@ -49,15 +49,15 @@ namespace CoffeeShopConsoleApp.Tests
         {
             //Arrange
             int price = 25;
-            int discount = 10;
+            int discount = 6;
            
-            Coffee ct = new Cortado("BB", 10, 25);
+          
 
             //Act
             try
             {
                 //Assert
-                ct.CoffeePrice();
+                Coffee ct = new Cortado("BB", discount, price);
 
             }
             catch (System.ArgumentOutOfRangeException e)
@@ -68,11 +68,43 @@ namespace CoffeeShopConsoleApp.Tests
             //Assert.Fail("The  expected exception was not thrown");
         }
 
-        //[TestMethod()]
-        //public void StrengthTest()
-        //{
 
-        //    Assert.Fail();
-        //}
+        [TestMethod()]
+        public void CoffeePriceTest_DiscountLessThanZero_ShouldThrowAnException()
+        {
+            //Arrange
+            int price = 25;
+            int discount = -2;
+
+
+
+            //Act
+            try
+            {
+                //Assert
+                Coffee ct = new Cortado("BB", discount, price);
+
+            }
+            catch (System.ArgumentOutOfRangeException e)
+            {
+                StringAssert.Contains(e.Message, Coffee.DiscountNotLessThanZero);
+                return;
+            }
+            //Assert.Fail("The  expected exception was not thrown");
+        }
+
+
+      //  [TestMethod()]
+      //  public void StrengthTest()
+      //  {
+      //      //Arrange
+      //      Coffee cs = new Latte("LL", 2, 40);
+      //      //Act
+      //      cs.Strength();
+      ////  https://docs.microsoft.com/en-us/visualstudio/test/unit-test-basics?view=vs-2017
+
+      //      //Assert
+      //      Assert.Fail();
+      //  }
     }
 }
