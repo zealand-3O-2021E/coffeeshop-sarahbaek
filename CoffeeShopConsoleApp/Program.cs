@@ -9,14 +9,16 @@ namespace CoffeeShopConsoleApp
         {
             Console.WriteLine("Hello Coffee Shop!");
             Console.WriteLine("---------------------------------");
-           // a list of all the orders for coffe in the coffee shop
+            // a list of all the orders for coffe in the coffee shop
 
-           List < Coffee > orderList = new List<Coffee>()
+            List<Coffee> orderList = new List<Coffee>()
            {
                 new Latte("Latte", 1),
                 new Cortado("Cortado", 1),
                 new BlackCoffee("Black Coffee",1),
-                new FlatWhite("Flat white",0)
+                new FlatWhite("Flat white",0),
+                new Expresso("Expresso", 0)
+                
 
            };
 
