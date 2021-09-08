@@ -51,8 +51,6 @@ namespace CoffeeShopConsoleApp.Tests
             int price = 25;
             int discount = 6;
            
-          
-
             //Act
             try
             {
@@ -65,7 +63,7 @@ namespace CoffeeShopConsoleApp.Tests
                 StringAssert.Contains(e.Message, Coffee.DiscountNotGreaterThanFive);
                 return;
             }
-            //Assert.Fail("The  expected exception was not thrown");
+            Assert.Fail("The  expected exception was not thrown");
         }
 
 
@@ -90,7 +88,7 @@ namespace CoffeeShopConsoleApp.Tests
                 StringAssert.Contains(e.Message, Coffee.DiscountNotLessThanZero);
                 return;
             }
-            //Assert.Fail("The  expected exception was not thrown");
+            Assert.Fail("The  expected exception was not thrown");
         }
 
 
