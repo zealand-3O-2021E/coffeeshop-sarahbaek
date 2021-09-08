@@ -13,17 +13,17 @@ namespace CoffeeShopConsoleApp
 
            List < Coffee > orderList = new List<Coffee>()
            {
-                new Latte(1),
-                new Cortado(1),
-                new BlackCoffee(1),
-                new FlatWhite(0)
+                new Latte("Latte", 1),
+                new Cortado("Cortado", 1),
+                new BlackCoffee("Black Coffee",1),
+                new FlatWhite("Flat white",0)
 
            };
 
 
             foreach (var coffee in orderList)
             {
-                Console.WriteLine("the Price of the coffee is = {0}, Strength= {1} ", coffee.price(), coffee.Strength());
+                Console.WriteLine("Name= {0}, Strength= {1} , Price = {2}",coffee.Name, coffee.Strength(), coffee.price());
                 Console.WriteLine();
               
             }
@@ -32,8 +32,8 @@ namespace CoffeeShopConsoleApp
 
             List<Coffee> milkyCoffee = new List<Coffee>()
             {
-                new Latte(0),
-                new Cortado(0)
+                new Latte("Latte", 0),
+                new Cortado("Cortado",0)
 
             };
            
@@ -41,7 +41,7 @@ namespace CoffeeShopConsoleApp
             Console.WriteLine("---------------------------");
             foreach (Coffee coffee in milkyCoffee)
             {
-                Console.WriteLine("the Price of the coffee is = {0}, Strength= {1} ", coffee.price(), coffee.Strength());
+                Console.WriteLine("the Price of the coffee is = {0}, Strength= {1} , discount = {2}", coffee.price(), coffee.Strength(), coffee.Discount);
                 Console.WriteLine();
             }
             Console.ReadLine();

@@ -6,7 +6,7 @@ namespace CoffeeShopConsoleApp
 {
     public class BlackCoffee : Coffee
     {
-        public BlackCoffee(int discount): base(discount)
+        public BlackCoffee(string name, int discount): base(name,discount)
         {
          
         }

@@ -16,9 +16,11 @@ namespace CoffeeShopConsoleApp
         /// <returns>20 dkr</returns>
         /// 
         private int _discount;
+        private string _name;
 
-        public Coffee(int discount)
+        public Coffee(string name, int discount)
         {
+            _name = name;
             _discount = discount;
 
             if (discount > 5)
@@ -27,9 +29,13 @@ namespace CoffeeShopConsoleApp
             }
         }
 
-        public int Discount { get => _discount; set => _discount = value; }
+        protected Coffee(int discount)
+        {
+            Discount = discount;
+        }
 
-  
+        public int Discount { get => _discount; set => _discount = value; }
+        public string Name { get => _name; set => _name = value; }
 
         public virtual int price()
         {

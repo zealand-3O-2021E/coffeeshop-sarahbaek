@@ -6,7 +6,7 @@ namespace CoffeeShopConsoleApp
 {
     public class Cortado : Coffee, IMilk
     {
-        public Cortado(int discount): base(discount)
+        public Cortado(string name, int discount): base(name, discount)
         {
        
         }
