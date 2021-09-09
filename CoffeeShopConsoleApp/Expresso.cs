@@ -13,8 +13,6 @@ namespace CoffeeShopConsoleApp
         }
         public string Blending()
         {
-         
-
             return "Mix unproceesed coffee and fine coffee";
         }
 

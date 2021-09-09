@@ -14,10 +14,12 @@ namespace CoffeeShopConsoleApp
         /// It's possible to override this method, beacuse it is virtual 
         /// </summary>
         /// <returns>20 dkr</returns>
-        /// 
+  
+
         public const string DiscountNotGreaterThanFive = "The discount should not be greater than 5 kr.";
         public const string DiscountNotLessThanZero = "The discount should not be less than 0kr.";
-        /// 
+        
+
         private int _discount;
         private string _name;
         private int _price;

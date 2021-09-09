@@ -11,16 +11,16 @@ namespace CoffeeShopConsoleApp.Tests
     public class CoffeeTests
     {
         //[TestMethod()]
-        //public void CoffeeTest()
-        //{
-        //    //Arrange
-        //    Coffee coffee = new Coffee("BB", 2, 40);
-        //    //Act
+        ////public void CoffeeTest()
+        ////{
+        ////    //Arrange
+        ////    Coffee coffee = new Coffee("BB", 2, 40);
+        ////    //Act
 
-        //    //Assert
+        ////    //Assert
 
-        //    Assert.Fail();
-        //}
+        ////    Assert.Fail();
+        ////}
 
 
         [TestMethod()]
@@ -44,65 +44,108 @@ namespace CoffeeShopConsoleApp.Tests
         }
 
 
+        
+
+
         [TestMethod()]
+        [ExpectedException(typeof(ArgumentOutOfRangeException))]
         public void CoffeePriceTest_DiscountOver5_ShouldThrowAnException()
         {
-            //Arrange
-            int price = 25;
-            int discount = 6;
-           
+        //Arrange
+            var cortadoDiscount = new Cortado("Cortado", 7, 25);
             //Act
-            try
-            {
-                //Assert
-                Coffee ct = new Cortado("BB", discount, price);
+            var cortadoPrice = cortadoDiscount.CoffeePrice();
+            //return;
+           
+            Assert.Fail();
 
-            }
-            catch (System.ArgumentOutOfRangeException e)
-            {
-                StringAssert.Contains(e.Message, Coffee.DiscountNotGreaterThanFive);
-                return;
-            }
-            Assert.Fail("The  expected exception was not thrown");
         }
 
-
         [TestMethod()]
+        [ExpectedException(typeof(ArgumentOutOfRangeException))]
         public void CoffeePriceTest_DiscountLessThanZero_ShouldThrowAnException()
         {
             //Arrange
-            int price = 25;
-            int discount = -2;
-
-
-
+            var cortadoDiscount = new Cortado("Cortado", -1, 25);
             //Act
-            try
-            {
-                //Assert
-                Coffee ct = new Cortado("BB", discount, price);
+            var cortadoPrice = cortadoDiscount.CoffeePrice();
+            //return;
 
-            }
-            catch (System.ArgumentOutOfRangeException e)
-            {
-                StringAssert.Contains(e.Message, Coffee.DiscountNotLessThanZero);
-                return;
-            }
-            Assert.Fail("The  expected exception was not thrown");
+            Assert.Fail();
+
         }
 
 
-      //  [TestMethod()]
-      //  public void StrengthTest()
-      //  {
-      //      //Arrange
-      //      Coffee cs = new Latte("LL", 2, 40);
-      //      //Act
-      //      cs.Strength();
-      ////  https://docs.microsoft.com/en-us/visualstudio/test/unit-test-basics?view=vs-2017
+      
 
-      //      //Assert
-      //      Assert.Fail();
-      //  }
+       
+
+        [TestMethod()]
+        public void StrengthTest()
+        {
+            //Arrange
+            var coffeeLatee = new Latte("LL", 2, 40);
+
+            //Act
+            var latteStrength = coffeeLatee.Strength();
+
+            //Assert
+            Assert.AreEqual("Weak", latteStrength);
+
+            //Assert.Fail();
+        }
+
+
+
+
+
+
+        //[TestMethod()]
+        //[ExpectedException(typeof(ArgumentException))]
+        //public void CoffeePriceTest_DiscountOver5_ShouldThrowAnException()
+        //{
+        //    //Arrange
+        //    int price = 25;
+        //    int discount = 6;
+
+        //    //Act
+        //    try
+        //    {
+        //        //Assert
+        //        Coffee ct = new Cortado("BB", discount, price);
+
+        //    }
+        //    catch (System.ArgumentOutOfRangeException e)
+        //    {
+        //        StringAssert.Contains(e.Message, Coffee.DiscountNotGreaterThanFive);
+        //        return;
+        //    }
+        //    Assert.Fail("The  expected exception was not thrown");
+        //}
+
+        //[TestMethod()]
+        //public void CoffeePriceTest_DiscountLessThanZero_ShouldThrowAnException()
+        //{
+        //    //Arrange
+        //    int price = 25;
+        //    int discount = -2;
+
+
+
+        //    //Act
+        //    try
+        //    {
+        //        //Assert
+        //        Coffee ct = new Cortado("BB", discount, price);
+
+        //    }
+        //    catch (System.ArgumentOutOfRangeException e)
+        //    {
+        //        StringAssert.Contains(e.Message, Coffee.DiscountNotLessThanZero);
+        //        return;
+        //    }
+        //    Assert.Fail("The  expected exception was not thrown");
+        //}
+
     }
 }

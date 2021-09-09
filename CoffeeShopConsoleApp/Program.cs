@@ -19,7 +19,6 @@ namespace CoffeeShopConsoleApp
                 new FlatWhite("Flat white",0, 40),
                 new Expresso("Expresso", 0, 40)
                 
-
            };
 
 
