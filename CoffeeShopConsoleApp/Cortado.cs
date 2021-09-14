@@ -12,7 +12,13 @@ namespace CoffeeShopConsoleApp
         }
         public int MlMilk()
         {
-            return 40;
+            int ml = 40;
+            if (ml > 40 || ml< 40)
+            {
+                throw new System.Reflection.TargetParameterCountException();
+            }
+
+            return ml;
         }
 
         public override int CoffeePrice()

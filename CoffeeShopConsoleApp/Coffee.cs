@@ -23,6 +23,7 @@ namespace CoffeeShopConsoleApp
         private int _discount;
         private string _name;
         private int _price;
+      
 
         public Coffee(string name, int discount, int price)
         {

@@ -45,6 +45,8 @@ namespace CoffeeShopConsoleApp
                 Console.WriteLine("the Price of the coffee is = {0}, Strength= {1} , discount = {2}", coffee.CoffeePrice(), coffee.Strength(), coffee.Discount);
                 Console.WriteLine();
             }
+
+            
             Console.ReadLine();
 
         }

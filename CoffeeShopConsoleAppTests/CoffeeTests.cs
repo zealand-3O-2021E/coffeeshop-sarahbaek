@@ -10,25 +10,19 @@ namespace CoffeeShopConsoleApp.Tests
     [TestClass()]
     public class CoffeeTests
     {
-        //[TestMethod()]
-        ////public void CoffeeTest()
-        ////{
-        ////    //Arrange
-        ////    Coffee coffee = new Coffee("BB", 2, 40);
-        ////    //Act
-
-        ////    //Assert
-
-        ////    Assert.Fail();
-        ////}
+        [TestMethod()]
+        public void CoffeeTest()
+        {
+         
+        }
 
 
         [TestMethod()]
         public void CoffeePriceTest_CorrectDiscount_ShouldPass()
         {
             //Arrange
-            int price = 40;
-            int discount = 3;
+            //int price = 40;
+            //int discount = 3;
             int expected = 37;
 
 
@@ -44,22 +38,27 @@ namespace CoffeeShopConsoleApp.Tests
         }
 
 
-        
+
 
 
         [TestMethod()]
+        //[DataTestMethod]
+        //[DataRow(-1)]
+        //[DataRow(10)]
         [ExpectedException(typeof(ArgumentOutOfRangeException))]
         public void CoffeePriceTest_DiscountOver5_ShouldThrowAnException()
         {
-        //Arrange
-            var cortadoDiscount = new Cortado("Cortado", 7, 25);
+            //Arrange
+            var cortadoDiscount = new Cortado("Cortado", 10, 20);
             //Act
             var cortadoPrice = cortadoDiscount.CoffeePrice();
             //return;
-           
+
             Assert.Fail();
 
         }
+
+  
 
         [TestMethod()]
         [ExpectedException(typeof(ArgumentOutOfRangeException))]
@@ -76,9 +75,9 @@ namespace CoffeeShopConsoleApp.Tests
         }
 
 
-      
 
-       
+
+
 
         [TestMethod()]
         public void StrengthTest()
@@ -94,6 +93,45 @@ namespace CoffeeShopConsoleApp.Tests
 
             //Assert.Fail();
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
